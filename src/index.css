@@ -5,9 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+  color: #40b8e9;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.fadein {
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.loading {
+  animation: shake 1s infinite;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate(-1px, 0 ); }
+    20%, 80% { transform: translate(2px, 0); }
+    30%, 50%, 70% { transform: translate(-4px, 0); }
+    40%, 60% { transform: translate(4px, 0); }
 }
