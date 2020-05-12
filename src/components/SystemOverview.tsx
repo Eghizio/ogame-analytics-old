@@ -21,7 +21,7 @@ const SystemOverview: React.FC<SystemOverviewProps> = ({title, system, alliedSys
 
         const reducedSystem = {
             name: name,
-            x: systemData.map((_, i) => i),
+            x: systemData.map((_, i) => i+1),
             y: systemData,
             type: "bar" as const,
             ...(color && { marker: { color: color } })
@@ -37,7 +37,6 @@ const SystemOverview: React.FC<SystemOverviewProps> = ({title, system, alliedSys
     const moonsInSystem = systemReducer(moons, "Moons", COLORS.PURPLE);
     const alliedPlanetsInSystem = systemReducer(alliedSystem, "Allied Planets", COLORS.ORANGE);
     const alliedMoonsInSystem = systemReducer(alliedMoons, "Allied Moons", COLORS.RED);
-    console.log(alliedMoonsInSystem)
 
     const data = [
         planetsInSystem,
